@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhamad Azis Hakiki | Full-Stack Web Developer (Laravel & Modern Web Stack)</title>
+  <meta name="description"
+    content="Portofolio Software Engineer dan Full-Stack Web Developer berfokus pada arsitektur Laravel, database MySQL terstruktur, dan performa tinggi di Bogor, Jawa Barat.">
+  <meta name="author" content="Muhamad Azis Hakiki">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Muhamad Azis Hakiki | Full-Stack Web Developer">
+  <meta property="og:description"
+    content="Portofolio Software Engineer spesialisasi Laravel, MySQL, dan Modern Web Stack.">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              crimson: '#DC2626',
+              'crimson-dark': '#B91C1C',
+              technical: '#0284C7',
+              'technical-dark': '#0369A1',
+            },
+            navy: {
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Swiss Grid Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body
+  class="bg-white text-slate-900 antialiased font-body min-h-screen flex flex-col selection:bg-red-100 selection:text-red-900">
+
+  <!-- Aksesibilitas: Skip Link ke Konten Utama (R-32, R-39) -->
+  <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+
+  <!-- ========================================================================= -->
+  <!-- 1. NAVBAR MINIMALIS (SWISS TECHNICAL HEADER)                              -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-40 w-full bg-white/95 border-b border-slate-200 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
+      <!-- Developer Identity (Monospace & Avatar) -->
+      <a href="#hero"
+        class="group flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+        aria-label="Beranda Muhamad Azis Hakiki">
+        <span
+          class="font-mono-tech text-sm sm:text-base font-bold tracking-tight text-slate-900 group-hover:text-red-600 transition-colors">
+          AZIS_HAKIKI <span class="text-slate-400 font-normal">// DEV</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Menu (4 Items) -->
+      <nav class="hidden md:flex items-center space-x-8" aria-label="Navigasi Utama">
+        <a href="#proyek"
+          class="desktop-nav-link text-sm font-medium text-slate-700 hover:text-red-600 transition-colors focus-visible:ring-2 focus-visible:ring-sky-600">
+          Proyek
+        </a>
+        <a href="#tech-stack"
+          class="desktop-nav-link text-sm font-medium text-slate-700 hover:text-red-600 transition-colors focus-visible:ring-2 focus-visible:ring-sky-600">
+          Tech Stack
+        </a>
+        <a href="#layanan"
+          class="desktop-nav-link text-sm font-medium text-slate-700 hover:text-red-600 transition-colors focus-visible:ring-2 focus-visible:ring-sky-600">
+          Layanan
+        </a>
+        <a href="#kontak"
+          class="desktop-nav-link text-sm font-medium text-slate-700 hover:text-red-600 transition-colors focus-visible:ring-2 focus-visible:ring-sky-600">
+          Kontak
+        </a>
+      </nav>
+
+      <!-- CTA Hubungi Saya & Mobile Hamburger -->
+      <div class="flex items-center gap-3">
+        <a href="#kontak"
+          class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-mono-tech font-semibold bg-slate-900 text-white hover:bg-red-600 border border-slate-900 hover:border-red-600 transition-colors focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2">
+          Hubungi Saya
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-toggle" type="button"
+          class="md:hidden inline-flex items-center justify-center p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 focus-visible:ring-2 focus-visible:ring-sky-600"
+          aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu navigasi mobile">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-5 space-y-3 shadow-lg">
+      <nav class="flex flex-col space-y-2 font-mono-tech text-sm" aria-label="Navigasi Menu Mobile">
+        <a href="#proyek"
+          class="mobile-nav-link py-2 px-3 text-slate-800 hover:bg-slate-100 hover:text-red-600 border-l-2 border-transparent hover:border-red-600">
+          [01] Proyek
+        </a>
+        <a href="#tech-stack"
+          class="mobile-nav-link py-2 px-3 text-slate-800 hover:bg-slate-100 hover:text-red-600 border-l-2 border-transparent hover:border-red-600">
+          [02] Tech Stack
+        </a>
+        <a href="#layanan"
+          class="mobile-nav-link py-2 px-3 text-slate-800 hover:bg-slate-100 hover:text-red-600 border-l-2 border-transparent hover:border-red-600">
+          [03] Layanan
+        </a>
+        <a href="#kontak"
+          class="mobile-nav-link py-2 px-3 text-slate-800 hover:bg-slate-100 hover:text-red-600 border-l-2 border-transparent hover:border-red-600">
+          [04] Kontak
+        </a>
+      </nav>
+      <div class="pt-2">
+        <a href="#kontak"
+          class="mobile-nav-link block w-full text-center py-2.5 text-xs font-mono-tech font-bold bg-slate-900 text-white hover:bg-red-600">
+          Hubungi Saya
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="flex-grow">
+
+    <!-- ========================================================================= -->
+    <!-- 2. HERO SECTION (EDITORIAL SPLIT - SWISS GRID DENGAN FOTO DEVELOPER)      -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="relative border-b border-slate-200 bg-white overflow-hidden py-12 sm:py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+          <!-- Sisi Kiri: Headline & Proposisi Teknis (7 Kolom) -->
+          <div class="lg:col-span-7 space-y-6">
+
+            <!-- Metadata Status -->
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 bg-slate-50 border border-slate-200 text-xs font-mono-tech text-slate-700">
+              <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" aria-hidden="true"></span>
+              <span>Tersedia untuk Proyek Baru & Kolaborasi Teknis (Bogor, ID)</span>
+            </div>
+
+            <!-- Identity & H1 Teknis -->
+            <div class="space-y-3">
+              <p class="text-xs sm:text-sm font-mono-tech font-semibold text-red-600 uppercase tracking-wider">
+                Muhamad Azis Hakiki // Full-Stack Web Developer
+              </p>
+              <h1
+                class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.15]">
+                Membangun Sistem Informasi, Aplikasi Manajemen, dan Platform Web Skalabel Berbasis Laravel.
+              </h1>
+            </div>
+
+            <!-- Sub-headline Teknis -->
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-body max-w-2xl">
+              Fokus pada perancangan arsitektur database relasional yang rapi, efisiensi query SQL, keamanan otentikasi
+              data, dan antarmuka web yang fungsional serta responsif.
+            </p>
+
+            <!-- Aksi Utama (CTAs R-15) -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#proyek"
+                class="inline-flex items-center justify-center px-6 py-3.5 text-sm font-mono-tech font-semibold bg-red-600 text-white hover:bg-red-700 border border-red-600 shadow-sm transition-colors focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2">
+                Eksplorasi Proyek
+              </a>
+              <a href="https://github.com/aziz-hakiki" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center justify-center px-6 py-3.5 text-sm font-mono-tech font-medium bg-white text-slate-800 hover:bg-slate-100 border border-slate-300 transition-colors focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2">
+                Lihat Repositori GitHub
+              </a>
+            </div>
+
+            <!-- Quick Specs Row -->
+            <div
+              class="pt-4 border-t border-slate-100 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-mono-tech text-slate-500">
+              <div class="flex items-center gap-1.5">
+                <span class="text-slate-400">STACK:</span>
+                <span class="text-slate-800 font-medium">Laravel 11, PHP 8, MySQL, Tailwind</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-slate-400">OPS:</span>
+                <span class="text-slate-800 font-medium">Docker, Nginx, Linux (Rocky/Ubuntu)</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sisi Kanan: Lembar Spesifikasi Teknis & Foto Resmi Developer (5 Kolom) -->
+          <div class="lg:col-span-5 w-full">
+            <div class="border border-slate-200 bg-slate-50 shadow-sm relative overflow-hidden">
+
+              <!-- Foto Profil Developer (Swiss Editorial Framed Portrait) -->
+              <div class="relative bg-slate-100 border-b border-slate-200 overflow-hidden">
+                <img src="assets/foto.png" alt="Foto profil Muhamad Azis Hakiki, Full-Stack Web Developer" width="1402"
+                  height="1122" fetchpriority="high"
+                  class="w-full h-64 sm:h-72 object-cover object-top filter grayscale contrast-105 hover:grayscale-0 transition-all duration-300">
+
+                <!-- Technical Overlay Badges -->
+                <div
+                  class="absolute bottom-3 left-3 bg-slate-900/90 text-white px-2.5 py-1 text-[11px] font-mono-tech flex items-center gap-2 backdrop-blur-sm shadow-sm">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span>ENGINEER: MUHAMAD AZIS HAKIKI</span>
+                </div>
+                <div
+                  class="absolute top-3 right-3 bg-white/95 border border-slate-300 px-2 py-0.5 text-[10px] font-mono-tech text-slate-800 shadow-sm">
+                  DOMISILI: BOGOR, ID
+                </div>
+              </div>
+
+              <!-- Card Content: Header & Spec Key-Value Table -->
+              <div class="p-5 sm:p-6">
+
+                <div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-4">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 bg-red-600"></span>
+                    <span class="font-mono-tech text-xs font-bold text-slate-800">ENGINEER_SPECIFICATION_SHEET</span>
+                  </div>
+                  <span class="font-mono-tech text-[11px] text-slate-500">REV: 2026.1</span>
+                </div>
+
+                <!-- Spec Key-Value Table -->
+                <div class="space-y-2.5 font-mono-tech text-xs">
+
+                  <div class="flex justify-between items-start py-1 border-b border-slate-200/70">
+                    <span class="text-slate-500">NAMA_LENGKAP:</span>
+                    <span class="font-semibold text-slate-900 text-right">Muhamad Azis Hakiki</span>
+                  </div>
+
+                  <div class="flex justify-between items-start py-1 border-b border-slate-200/70">
+                    <span class="text-slate-500">PERAN_UTAMA:</span>
+                    <span class="text-slate-800 font-medium text-right">Full-Stack Web Developer</span>
+                  </div>
+
+                  <div class="flex justify-between items-start py-1 border-b border-slate-200/70">
+                    <span class="text-slate-500">SPESIALISASI:</span>
+                    <span class="text-slate-800 font-medium text-right">Laravel & Modern Web Stack</span>
+                  </div>
+
+                  <div class="flex justify-between items-start py-1 border-b border-slate-200/70">
+                    <span class="text-slate-500">CORE_RUNTIME:</span>
+                    <span class="text-slate-800 text-right">PHP 8.3 / Node.js 22 LTS</span>
+                  </div>
+
+                  <div class="flex justify-between items-start py-1 border-b border-slate-200/70">
+                    <span class="text-slate-500">DATABASE_ENGINE:</span>
+                    <span class="text-slate-800 text-right">MySQL, MariaDB (Normalized)</span>
+                  </div>
+
+                  <div class="flex justify-between items-start py-1 border-b border-slate-200/70">
+                    <span class="text-slate-500">SERVER_ENVIRONMENT:</span>
+                    <span class="text-slate-800 text-right">Linux (Nginx, Rocky Linux, Docker)</span>
+                  </div>
+
+                  <div class="flex justify-between items-start py-1 border-b border-slate-200/70">
+                    <span class="text-slate-500">LOKASI_DOMISILI:</span>
+                    <span class="text-slate-800 text-right">Bogor, Jawa Barat, ID</span>
+                  </div>
+
+                  <div class="flex justify-between items-start py-1">
+                    <span class="text-slate-500">INTEGRITAS_DATA:</span>
+                    <span class="text-emerald-700 font-semibold text-right">ACID Transactions & RBAC</span>
+                  </div>
+
+                </div>
+
+                <!-- Terminal Diagnostic Footer -->
+                <div
+                  class="mt-4 pt-3 border-t border-slate-200 bg-slate-900 text-slate-100 p-2.5 font-mono-tech text-[11px] flex items-center justify-between">
+                  <span class="text-emerald-400">$ git status: clean_tree</span>
+                  <span class="text-slate-400">READY_FOR_DEPLOY</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. SELECTED PROJECTS SHOWCASE (KATALOG KARYA 6 PROYEK)                   -->
+    <!-- ========================================================================= -->
+    <section id="proyek" class="py-16 sm:py-20 bg-slate-50/60 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header (Swiss Grid Editorial) -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-8 border-b border-slate-200 mb-8">
+          <div>
+            <div class="flex items-center gap-2 mb-2 font-mono-tech text-xs text-red-600 font-semibold uppercase">
+              <span class="w-2 h-2 bg-red-600 inline-block"></span>
+              <span>SHOWCASE KARYA TERPILIH // BAGIAN 01</span>
+            </div>
+            <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
+              Aplikasi & Sistem Informasi Berbasis Laravel
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 mt-1 font-body max-w-2xl">
+              Studi kasus implementasi nyata dengan penekanan pada penyelesaian masalah operasional, keamanan data, dan
+              struktur kode yang dapat dirawat.
+            </p>
+          </div>
+
+          <div id="project-counter"
+            class="font-mono-tech text-xs text-slate-600 bg-white px-3 py-1.5 border border-slate-200 self-start md:self-auto shrink-0 shadow-sm">
+            Menampilkan 6 proyek (Semua)
+          </div>
+        </div>
+
+        <!-- Filter Bar Kategori (R-26 Interaktif Nyata) -->
+        <div class="flex flex-wrap items-center gap-2 mb-8" role="group" aria-label="Filter kategori proyek">
+          <button type="button" data-filter="all" aria-pressed="true"
+            class="px-4 py-2 text-xs font-mono-tech font-semibold bg-slate-900 text-white border border-slate-900 transition-colors hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-slate-900">
+            Semua Proyek
+          </button>
+          <button type="button" data-filter="sistem-informasi" aria-pressed="false"
+            class="px-4 py-2 text-xs font-mono-tech font-medium bg-white text-slate-700 border border-slate-200 transition-colors hover:border-slate-400 focus-visible:ring-2 focus-visible:ring-sky-600">
+            Sistem Informasi & Internal
+          </button>
+          <button type="button" data-filter="ecommerce" aria-pressed="false"
+            class="px-4 py-2 text-xs font-mono-tech font-medium bg-white text-slate-700 border border-slate-200 transition-colors hover:border-slate-400 focus-visible:ring-2 focus-visible:ring-sky-600">
+            E-Commerce
+          </button>
+          <button type="button" data-filter="web-landing" aria-pressed="false"
+            class="px-4 py-2 text-xs font-mono-tech font-medium bg-white text-slate-700 border border-slate-200 transition-colors hover:border-slate-400 focus-visible:ring-2 focus-visible:ring-sky-600">
+            Web & Landing Page
+          </button>
+        </div>
+
+        <!-- Dynamic Projects Container (Swiss Asymmetrical Grid) -->
+        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <!-- Rendered via js/main.js & js/projects-data.js -->
+        </div>
+
+        <!-- Empty State (R-27) -->
+        <div id="projects-empty-state" class="hidden p-12 text-center border border-dashed border-slate-300 bg-white">
+          <p class="font-mono-tech text-sm text-slate-500">Tidak ada proyek yang sesuai dengan kategori terpilih.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. TECH STACK & CAPABILITIES (BENTO GRID TEKNIS TANPA PERSENTASE PALSU)  -->
+    <!-- ========================================================================= -->
+    <section id="tech-stack" class="py-16 sm:py-20 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="pb-8 border-b border-slate-200 mb-10">
+          <div class="flex items-center gap-2 mb-2 font-mono-tech text-xs text-red-600 font-semibold uppercase">
+            <span class="w-2 h-2 bg-red-600 inline-block"></span>
+            <span>ARSITEKTUR & KOMPETENSI TEKNIS // BAGIAN 02</span>
+          </div>
+          <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
+            Tech Stack & Kemampuan Rekayasa Perangkat Lunak
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-1 font-body max-w-2xl">
+            Penguasaan alat dan metodologi pengembangan berorientasi standar industri tanpa klaim persentase buatan.
+          </p>
+        </div>
+
+        <!-- Bento Grid Asimetris (Varied Rhythm RHYTHM: 2) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+          <!-- Block 1: Backend & Database (Besar: 7 Kolom) -->
+          <div class="lg:col-span-7 border border-slate-200 bg-slate-50 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-5">
+                <span class="font-mono-tech text-xs font-bold text-red-600 uppercase tracking-wider">[CORE] BACKEND &
+                  DATABASE</span>
+                <span class="font-mono-tech text-[11px] text-slate-500">SERVER LOGIC & PERSISTENCE</span>
+              </div>
+
+              <h3 class="font-heading text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                PHP & Ekosistem Laravel
+              </h3>
+
+              <p class="text-sm text-slate-600 font-body leading-relaxed mb-6">
+                Fokus utama pada pembuatan aplikasi web monolitik maupun headless dengan framework Laravel. Memastikan
+                pengelolaan dependensi rapi, pemisahan tanggung jawab kode menggunakan Service-Repository pattern, dan
+                proteksi dari kerentanan umum seperti SQL Injection dan CSRF.
+              </p>
+
+              <!-- Technical Skill Tags -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                <div class="bg-white p-3 border border-slate-200">
+                  <div class="font-mono-tech text-xs font-bold text-slate-900 mb-1">PHP 8.x & Laravel 11</div>
+                  <div class="text-xs text-slate-600">Eloquent ORM, Middleware, Service Container, Queue Jobs, Event &
+                    Listeners</div>
+                </div>
+                <div class="bg-white p-3 border border-slate-200">
+                  <div class="font-mono-tech text-xs font-bold text-slate-900 mb-1">Database Relasional & SQL</div>
+                  <div class="text-xs text-slate-600">MySQL & MariaDB, skema normalisasi 3NF, query optimization,
+                    indexing, transaksi ACID</div>
+                </div>
+                <div class="bg-white p-3 border border-slate-200">
+                  <div class="font-mono-tech text-xs font-bold text-slate-900 mb-1">RESTful API Architecture</div>
+                  <div class="text-xs text-slate-600">Desain endpoint terstandarisasi, Sanctum/Passport token auth,
+                    validasi request ketat</div>
+                </div>
+                <div class="bg-white p-3 border border-slate-200">
+                  <div class="font-mono-tech text-xs font-bold text-slate-900 mb-1">Biometrik & Keamanan Data</div>
+                  <div class="text-xs text-slate-600">Integrasi Face Recognition, geofencing, Role-Based Access Control
+                    (RBAC), audit logging</div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono-tech text-slate-500">
+              <span>STANDAR: PSR-12, SOLID PRINCIPLES</span>
+              <span class="text-slate-800 font-medium">STABIL & TERUJI</span>
+            </div>
+          </div>
+
+          <!-- Block 2: Deployment & Server (5 Kolom) -->
+          <div class="lg:col-span-5 border border-slate-200 bg-white p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-5">
+                <span class="font-mono-tech text-xs font-bold text-sky-700 uppercase tracking-wider">[INFRA] DEPLOYMENT
+                  & SERVER</span>
+                <span class="font-mono-tech text-[11px] text-slate-500">ENVIRONMENT & DEVOPS</span>
+              </div>
+
+              <h3 class="font-heading text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                Linux & Web Server
+              </h3>
+
+              <p class="text-sm text-slate-600 font-body leading-relaxed mb-6">
+                Kemampuan mengoperasikan lingkungan server mandiri berbasis Linux untuk deployment aplikasi Laravel
+                dengan tuning performa Nginx dan keamanan jaringan dasar.
+              </p>
+
+              <div class="space-y-3 mb-6">
+                <div class="bg-slate-50 p-3 border border-slate-200">
+                  <div class="font-mono-tech text-xs font-bold text-slate-900">Linux Administration</div>
+                  <div class="text-xs text-slate-600 mt-0.5">Rocky Linux, Ubuntu Server, pengelolaan user permission,
+                    SSH keys, cron jobs</div>
+                </div>
+                <div class="bg-slate-50 p-3 border border-slate-200">
+                  <div class="font-mono-tech text-xs font-bold text-slate-900">Nginx & PHP-FPM Engine</div>
+                  <div class="text-xs text-slate-600 mt-0.5">Konfigurasi reverse proxy, SSL/TLS Let's Encrypt, buffer
+                    optimization, gzip compression</div>
+                </div>
+                <div class="bg-slate-50 p-3 border border-slate-200">
+                  <div class="font-mono-tech text-xs font-bold text-slate-900">Docker & Git Flow</div>
+                  <div class="text-xs text-slate-600 mt-0.5">Containerization environment lokal, docker-compose
+                    multi-service, branch management Git</div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono-tech text-slate-500">
+              <span>TARGET SERVER: VPS / ON-PREMISE</span>
+              <span class="text-slate-800 font-medium">REPRODUCIBLE</span>
+            </div>
+          </div>
+
+          <!-- Block 3: Frontend & UI Engineering (Penuh 12 Kolom) -->
+          <div class="lg:col-span-12 border border-slate-200 bg-slate-50 p-6 sm:p-8">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-5">
+              <span class="font-mono-tech text-xs font-bold text-slate-900 uppercase tracking-wider">[INTERFACE]
+                FRONTEND & UI IMPLEMENTATION</span>
+              <span class="font-mono-tech text-[11px] text-slate-500">PERFORMANCE & ACCESSIBILITY</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+              <div>
+                <h4 class="font-mono-tech text-sm font-bold text-slate-900 mb-2">Blade Templating & Components</h4>
+                <p class="text-xs text-slate-600 leading-relaxed font-body">
+                  Pembuatan layout modular dengan Laravel Blade components, slot hierarki, dan rendering sisi server
+                  yang cepat tanpa beban hidrasi JavaScript berlebih.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-mono-tech text-sm font-bold text-slate-900 mb-2">Tailwind CSS & High Contrast</h4>
+                <p class="text-xs text-slate-600 leading-relaxed font-body">
+                  Penyusunan utility-first styling yang mematuhi rasio kontras WCAG AA, penataan grid fleksibel, serta
+                  antarmuka responsif ramah perangkat mobile.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-mono-tech text-sm font-bold text-slate-900 mb-2">Vanilla JavaScript (ES6+)</h4>
+                <p class="text-xs text-slate-600 leading-relaxed font-body">
+                  Interaktivitas DOM ringan, manipulasi state form asinkron (Fetch API), validasi sisi klien, serta
+                  penanganan event keyboard tanpa ketergantungan library berat.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. SERVICES / LAYANAN TEKNIS                                              -->
+    <!-- ========================================================================= -->
+    <section id="layanan" class="py-16 sm:py-20 bg-slate-50/60 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Header -->
+        <div class="pb-8 border-b border-slate-200 mb-10">
+          <div class="flex items-center gap-2 mb-2 font-mono-tech text-xs text-red-600 font-semibold uppercase">
+            <span class="w-2 h-2 bg-red-600 inline-block"></span>
+            <span>LINGKUP JASA PENGEMBANGAN // BAGIAN 03</span>
+          </div>
+          <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
+            Layanan Pengembangan Web & Rekayasa Sistem
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-1 font-body max-w-2xl">
+            Solusi teknis yang dirancang khusus untuk memecahkan hambatan operasional bisnis dan instansi.
+          </p>
+        </div>
+
+        <!-- 4 Services Swiss Grid (Bukan kartu 3-kolom monoton) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Service 01 -->
+          <div class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
+            <div class="flex items-start justify-between mb-4">
+              <span
+                class="font-mono-tech text-xs font-bold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5">LAYANAN_01</span>
+              <span class="font-mono-tech text-xs text-slate-400">ENTERPRISE // OPERASIONAL</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">
+              Sistem Informasi Manajemen & Aplikasi Internal
+            </h3>
+            <p class="text-sm text-slate-600 font-body leading-relaxed mb-4">
+              Pengembangan perangkat lunak internal kustom seperti sistem presensi pegawai berfitur pengenalan wajah
+              (Face Recognition), manajemen asrama/hunian, sistem administrasi kepegawaian (HRIS), atau inventaris
+              gudang berbasis Laravel dan database MySQL yang aman.
+            </p>
+            <div class="text-xs font-mono-tech text-slate-500 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
+              <span>* Face Biometric & Geofencing</span>
+              <span>* Multi-Role Authorization</span>
+              <span>* Export Rekap Excel/PDF</span>
+            </div>
+          </div>
+
+          <!-- Service 02 -->
+          <div class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
+            <div class="flex items-start justify-between mb-4">
+              <span
+                class="font-mono-tech text-xs font-bold text-sky-700 bg-sky-50 border border-sky-200 px-2 py-0.5">LAYANAN_02</span>
+              <span class="font-mono-tech text-xs text-slate-400">COMMERCE // TRANSAKSI</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">
+              Platform E-Commerce & Integrasi Transaksi
+            </h3>
+            <p class="text-sm text-slate-600 font-body leading-relaxed mb-4">
+              Pembangunan toko daring dengan sistem keranjang belanja atomik, katalog dinamis, integrasi kalkulasi tarif
+              ekspedisi logistik, serta otomasi verifikasi transaksi dengan payment gateway via webhook aman.
+            </p>
+            <div class="text-xs font-mono-tech text-slate-500 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
+              <span>* Inventory Concurrency Lock</span>
+              <span>* Webhook Handler</span>
+              <span>* Dashboard Order Admin</span>
+            </div>
+          </div>
+
+          <!-- Service 03 -->
+          <div class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
+            <div class="flex items-start justify-between mb-4">
+              <span
+                class="font-mono-tech text-xs font-bold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5">LAYANAN_03</span>
+              <span class="font-mono-tech text-xs text-slate-400">BRANDING // CMS</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">
+              Website Company Profile (CMS) & Landing Page
+            </h3>
+            <p class="text-sm text-slate-600 font-body leading-relaxed mb-4">
+              Pembuatan profil instansi/perusahaan resmi dengan panel pengelolaan konten (CMS) dinamis, struktur SEO
+              yang terarah, serta landing page promosi berperforma kilat dengan formulir prospek terintegrasi langsung
+              ke WhatsApp.
+            </p>
+            <div class="text-xs font-mono-tech text-slate-500 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
+              <span>* CMS Konten Mandiri</span>
+              <span>* Core Web Vitals Optimal</span>
+              <span>* WhatsApp Direct Link</span>
+            </div>
+          </div>
+
+          <!-- Service 04 -->
+          <div class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
+            <div class="flex items-start justify-between mb-4">
+              <span
+                class="font-mono-tech text-xs font-bold text-sky-700 bg-sky-50 border border-sky-200 px-2 py-0.5">LAYANAN_04</span>
+              <span class="font-mono-tech text-xs text-slate-400">AUDIT // REFACTORING</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">
+              Audit Performa, Database & Refactoring Laravel
+            </h3>
+            <p class="text-sm text-slate-600 font-body leading-relaxed mb-4">
+              Pemeriksaan aplikasi web Laravel yang sudah berjalan: identifikasi N+1 query problem, indexing tabel
+              MySQL, restrukturisasi kode berantakan (spaghetti code) menjadi Service-Repository, dan setup deployment
+              VPS Linux Nginx.
+            </p>
+            <div class="text-xs font-mono-tech text-slate-500 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
+              <span>* Query Speedup & Indexing</span>
+              <span>* Code Quality Refactoring</span>
+              <span>* Nginx & PHP-FPM Tuning</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. CONTACT SECTION & FOOTER                                               -->
+    <!-- ========================================================================= -->
+    <section id="kontak" class="py-16 sm:py-20 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Header -->
+        <div class="pb-8 border-b border-slate-200 mb-10">
+          <div class="flex items-center gap-2 mb-2 font-mono-tech text-xs text-red-600 font-semibold uppercase">
+            <span class="w-2 h-2 bg-red-600 inline-block"></span>
+            <span>HUBUNGI DEVELOPER // BAGIAN 04</span>
+          </div>
+          <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
+            Mulai Diskusi & Kolaborasi Proyek
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-1 font-body max-w-2xl">
+            Siap mendiskusikan kebutuhan arsitektur sistem informasi, aplikasi e-commerce, maupun web profile berbasis
+            Laravel.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+          <!-- Kontak Langsung & Kanal Komunikasi (5 Kolom) -->
+          <div class="lg:col-span-5 space-y-6">
+
+            <div class="border border-slate-200 bg-slate-50 p-6">
+
+              <!-- Mini Profile Card with Photo -->
+              <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-200">
+                <div>
+                  <h3 class="font-heading text-base font-bold text-slate-900">
+                    Muhamad Azis Hakiki
+                  </h3>
+                  <p class="font-mono-tech text-xs text-red-600 font-medium">
+                    Full-Stack Web Developer
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-4 font-mono-tech text-xs">
+
+                <!-- Email Direct -->
+                <div class="p-3 bg-white border border-slate-200">
+                  <span class="text-slate-500 block mb-1">EMAIL LANGSUNG:</span>
+                  <a href="mailto:mohazizhakiki@gmail.com"
+                    class="text-slate-900 font-bold hover:text-red-600 break-all transition-colors focus-visible:ring-1 focus-visible:ring-sky-600">
+                    mohazizhakiki@gmail.com
+                  </a>
+                  <div class="mt-2 flex items-center gap-2">
+                    <button id="copy-email-btn" type="button"
+                      class="px-2.5 py-1 text-[11px] bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300">
+                      Salin Email
+                    </button>
+                    <span id="copy-email-feedback" class="hidden text-[11px] text-emerald-700 font-semibold">Tersalin ke
+                      clipboard!</span>
+                  </div>
+                </div>
+
+                <!-- WhatsApp Direct -->
+                <div class="p-3 bg-white border border-slate-200">
+                  <span class="text-slate-500 block mb-1">WHATSAPP RESMI:</span>
+                  <div class="text-slate-900 font-bold mb-2">085694997960</div>
+                  <a href="https://wa.me/6285694997960?text=Halo%20Muhamad%20Azis%20Hakiki,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20proyek%20pengembangan%20web%20Laravel."
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-700 text-white hover:bg-emerald-800 text-[11px] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-emerald-700">
+                    Buka Chat WhatsApp
+                  </a>
+                </div>
+
+                <!-- GitHub Repository -->
+                <div class="p-3 bg-white border border-slate-200">
+                  <span class="text-slate-500 block mb-1">GITHUB:</span>
+                  <a href="https://github.com/aziz-hakiki" target="_blank" rel="noopener noreferrer"
+                    class="text-slate-900 font-bold hover:text-red-600 transition-colors focus-visible:ring-1 focus-visible:ring-sky-600">
+                    github.com/aziz-hakiki
+                  </a>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="p-3 bg-white border border-slate-200">
+                  <span class="text-slate-500 block mb-1">LINKEDIN:</span>
+                  <a href="https://www.linkedin.com/in/azis-hakiki" target="_blank" rel="noopener noreferrer"
+                    class="text-slate-900 font-bold hover:text-red-600 transition-colors focus-visible:ring-1 focus-visible:ring-sky-600">
+                    linkedin.com/in/azis-hakiki
+                  </a>
+                </div>
+
+                <!-- Lokasi -->
+                <div class="p-3 bg-white border border-slate-200">
+                  <span class="text-slate-500 block mb-1">DOMISILI & ZONA WAKTU:</span>
+                  <span class="text-slate-800 font-medium">Bogor, Jawa Barat, Indonesia (WIB / UTC+7)</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Formulir Kontak Teknis (7 Kolom) -->
+          <div class="lg:col-span-7">
+            <div class="border border-slate-200 bg-white p-6 sm:p-8">
+              <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">
+                Kirim Rincian Kebutuhan Proyek
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 font-body mb-6">
+                Formulir ini memvalidasi kebutuhan Anda dan menyiapkan pesan terstruktur untuk diskusi teknis via
+                WhatsApp atau email langsung.
+              </p>
+
+              <!-- Feedback box -->
+              <div id="form-feedback" class="hidden mb-6 p-3 text-xs font-mono-tech border"></div>
+
+              <form id="contact-form" class="space-y-4" novalidate>
+
+                <div>
+                  <label for="contact-name" class="block font-mono-tech text-xs font-semibold text-slate-800 mb-1">
+                    NAMA LENGKAP ATAU INSTANSI <span class="text-red-600">*</span>
+                  </label>
+                  <input type="text" id="contact-name" name="name" required
+                    placeholder="Contoh: PT Pratama Solusi / Bapak Hendra"
+                    class="w-full px-3.5 py-2.5 text-sm font-body border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-slate-900 focus-visible:ring-2 focus-visible:ring-sky-600">
+                </div>
+
+                <div>
+                  <label for="contact-email" class="block font-mono-tech text-xs font-semibold text-slate-800 mb-1">
+                    ALAMAT EMAIL RESMI <span class="text-red-600">*</span>
+                  </label>
+                  <input type="email" id="contact-email" name="email" required placeholder="nama@domain-instansi.com"
+                    class="w-full px-3.5 py-2.5 text-sm font-body border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-slate-900 focus-visible:ring-2 focus-visible:ring-sky-600">
+                </div>
+
+                <div>
+                  <label for="contact-type" class="block font-mono-tech text-xs font-semibold text-slate-800 mb-1">
+                    KATEGORI SISTEM YANG DIBUTUHKAN
+                  </label>
+                  <select id="contact-type" name="project_type"
+                    class="w-full px-3.5 py-2.5 text-sm font-body border border-slate-300 bg-white text-slate-900 focus:border-slate-900 focus-visible:ring-2 focus-visible:ring-sky-600">
+                    <option value="Sistem Informasi & Manajemen Internal">Sistem Informasi & Manajemen Internal
+                      (Presensi Face Recognition, Asrama, HRIS)</option>
+                    <option value="Platform E-Commerce & Transaksi">Platform E-Commerce & Transaksi Terintegrasi
+                    </option>
+                    <option value="Website Company Profile / CMS">Website Company Profile (CMS) & Landing Page Konversi
+                    </option>
+                    <option value="Audit & Optimasi Sistem Laravel">Audit & Optimasi Sistem Laravel (Database / Speedup)
+                    </option>
+                    <option value="Pengembangan Web Kustom Lainnya">Pengembangan Web Kustom Lainnya</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block font-mono-tech text-xs font-semibold text-slate-800 mb-1">
+                    RINGKASAN KEBUTUHAN ATAU SPESIFIKASI <span class="text-red-600">*</span>
+                  </label>
+                  <textarea id="contact-message" name="message" rows="4" required
+                    placeholder="Uraikan kendala operasional yang ingin diselesaikan atau fitur inti yang diinginkan..."
+                    class="w-full px-3.5 py-2.5 text-sm font-body border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-slate-900 focus-visible:ring-2 focus-visible:ring-sky-600"></textarea>
+                </div>
+
+                <div class="pt-2">
+                  <button type="submit"
+                    class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 font-mono-tech text-xs font-bold bg-slate-900 text-white hover:bg-red-600 transition-colors focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2">
+                    Kirim Pesan via WhatsApp
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 7. FOOTER (SWISS MINIMALIST & TRANSPARENT SPECS)                          -->
+  <!-- ========================================================================= -->
+  <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800 items-start">
+
+        <div class="md:col-span-6 space-y-3">
+          <div class="flex items-center gap-3">
+
+          </div>
+          <p class="text-xs text-slate-400 font-mono-tech max-w-md">
+            Full-Stack Web Developer. Rekayasa sistem web berbasis Laravel, biometrik presensi, normalisasi database
+            relasional, dan arsitektur kode terstruktur.
+          </p>
+          <p class="text-xs text-slate-500 font-mono-tech">
+            Domisili: Bogor, Jawa Barat, Indonesia
+          </p>
+        </div>
+
+        <div class="md:col-span-3 space-y-2 font-mono-tech text-xs">
+          <span class="text-slate-400 font-semibold block uppercase tracking-wider">NAVIGASI HALAMAN</span>
+          <ul class="space-y-1 text-slate-300">
+            <li><a href="#proyek" class="hover:text-red-400 transition-colors">[01] Katalog Proyek</a></li>
+            <li><a href="#tech-stack" class="hover:text-red-400 transition-colors">[02] Tech Stack & DB</a></li>
+            <li><a href="#layanan" class="hover:text-red-400 transition-colors">[03] Lingkup Layanan</a></li>
+            <li><a href="#kontak" class="hover:text-red-400 transition-colors">[04] Kontak Resmi</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3 space-y-2 font-mono-tech text-xs">
+          <span class="text-slate-400 font-semibold block uppercase tracking-wider">JARINGAN PROFESIONAL</span>
+          <ul class="space-y-1 text-slate-300">
+            <li><a href="https://github.com/aziz-hakiki" target="_blank" rel="noopener noreferrer"
+                class="hover:text-red-400 transition-colors">GitHub: aziz-hakiki</a></li>
+            <li><a href="https://www.linkedin.com/in/azis-hakiki" target="_blank" rel="noopener noreferrer"
+                class="hover:text-red-400 transition-colors">LinkedIn: azis-hakiki</a></li>
+            <li><a href="mailto:mohazizhakiki@gmail.com" class="hover:text-red-400 transition-colors">Email:
+                mohazizhakiki@gmail.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Anti-Slop Architectural Notice -->
+      <div
+        class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono-tech text-[11px] text-slate-400">
+        <div>
+          Muhamad Azis Hakiki &copy; 2026. Dibangun dengan HTML5 Semantik, Tailwind CSS, dan JavaScript Vanilla.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 8. MODAL DETAIL TEKNIS PROYEK (ACCESSIBLE & ARCHITECTURAL DRAWER)         -->
+  <!-- ========================================================================= -->
+  <div id="project-modal" class="hidden fixed inset-0 z-50 overflow-y-auto" role="dialog" aria-modal="true"
+    aria-labelledby="modal-title" aria-hidden="true">
+
+    <!-- Backdrop (R-10 Dose cap: at most 1-2 glass accents) -->
+    <div id="modal-backdrop" class="modal-backdrop fixed inset-0"></div>
+
+    <!-- Centering Container -->
+    <div class="min-h-screen px-4 text-center flex items-center justify-center p-4 sm:p-6">
+
+      <!-- Modal Panel -->
+      <div
+        class="modal-content-panel inline-block w-full max-w-4xl bg-white text-left align-middle transition-all transform border-2 border-slate-900 shadow-2xl relative my-8 overflow-hidden">
+
+        <!-- Modal Top Bar (Swiss Technical Header) -->
+        <div class="bg-slate-900 text-white px-5 sm:px-6 py-3.5 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="w-2.5 h-2.5 bg-red-600 block"></span>
+            <span id="modal-index" class="font-mono-tech text-xs text-slate-300 font-bold">[PROYEK --]</span>
+            <span class="text-slate-600">|</span>
+            <span id="modal-category" class="font-mono-tech text-xs text-red-400 font-medium">KATEGORI</span>
+          </div>
+
+          <!-- Close Button (Accessible) -->
+          <button id="modal-close-btn" type="button"
+            class="text-slate-300 hover:text-white p-1 hover:bg-slate-800 transition-colors focus-visible:ring-2 focus-visible:ring-white"
+            aria-label="Tutup jendela detail proyek (atau tekan tombol Escape)">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Modal Body Scrollable -->
+        <div class="p-6 sm:p-8 max-h-[78vh] overflow-y-auto space-y-6">
+
+          <!-- Title & Summary -->
+          <div>
+            <h2 id="modal-title" class="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
+              Judul Proyek
+            </h2>
+            <p id="modal-summary" class="text-sm sm:text-base text-slate-600 font-body leading-relaxed">
+              Ringkasan aplikasi.
+            </p>
+          </div>
+
+          <!-- Placeholder Screenshot UI (16:10 Ratio) -->
+          <div id="modal-preview-box">
+            <!-- Diisi dinamis dengan komentar <!-- GANTI DENGAN SCREENSHOT APLIKASI ASLI --> -->
+          </div>
+
+          <!-- 2-Column Split: Masalah vs Solusi Arsitektur -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+
+            <!-- Masalah Bisnis & Operasional -->
+            <div class="bg-red-50/50 border border-red-200 p-5">
+              <div class="flex items-center gap-2 mb-2 font-mono-tech text-xs font-bold text-red-700 uppercase">
+                <span class="w-2 h-2 bg-red-600"></span>
+                <span>Tantangan & Masalah Bisnis</span>
+              </div>
+              <p id="modal-problem" class="text-xs sm:text-sm text-slate-700 font-body leading-relaxed">
+                Uraian masalah.
+              </p>
+            </div>
+
+            <!-- Solusi Arsitektur & Database -->
+            <div class="bg-sky-50/50 border border-sky-200 p-5">
+              <div class="flex items-center gap-2 mb-2 font-mono-tech text-xs font-bold text-sky-800 uppercase">
+                <span class="w-2 h-2 bg-sky-600"></span>
+                <span>Solusi Arsitektur & Rekayasa Database</span>
+              </div>
+              <p id="modal-solution" class="text-xs sm:text-sm text-slate-700 font-body leading-relaxed">
+                Uraian arsitektur.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Fitur Utama Sistem -->
+          <div class="border border-slate-200 bg-slate-50 p-5">
+            <h4 class="font-mono-tech text-xs font-bold text-slate-900 uppercase tracking-wider mb-3">
+              Fitur Utama Sistem
+            </h4>
+            <ul id="modal-features-list" class="space-y-2">
+              <!-- Diisi dinamis -->
+            </ul>
+          </div>
+
+          <!-- Tech Stack Badges -->
+          <div>
+            <h4 class="font-mono-tech text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">
+              Teknologi & Lingkungan Eksekusi
+            </h4>
+            <div id="modal-stack-badges" class="flex flex-wrap gap-2">
+              <!-- Diisi dinamis -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal Bottom Actions (Standardized Honest Placeholders) -->
+        <div class="bg-slate-100 border-t border-slate-200 px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+          <div class="font-mono-tech text-xs text-slate-500">
+            STATUS ARSIP: DOKUMENTASI RESMI
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <a id="modal-demo-btn" href="#demo-placeholder"
+              class="inline-flex items-center justify-center px-4 py-2 text-xs font-mono-tech font-bold bg-red-600 text-white hover:bg-red-700 transition-colors focus-visible:ring-2 focus-visible:ring-red-600">
+              Lihat Demo Live
+            </a>
+            <a id="modal-repo-btn" href="#repo-placeholder"
+              class="inline-flex items-center justify-center px-4 py-2 text-xs font-mono-tech font-medium bg-white text-slate-800 hover:bg-slate-200 border border-slate-300 transition-colors focus-visible:ring-2 focus-visible:ring-slate-900">
+              Repositori GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
