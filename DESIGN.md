@@ -13,7 +13,7 @@
 ## 2. Dial Liveliness (Part 3 Anti-Slop)
 - **ENERGY: 2 (Balanced):** Tegas, percaya diri, berfokus pada kapabilitas arsitektur teknis dan keandalan sistem tanpa gimmick berlebihan.
 - **RHYTHM: 2 (Consistent with Structural Variety):** Variasi komposisi editorial split di hero dengan foto profil resmi, bento asimetris pada tech stack, dan tata letak 2-kolom teknis dengan modal arsitektur untuk proyek.
-- **MOTION: 1 (Calm & Purposeful):** Transisi halus dan cepat (150ms-200ms) untuk hover, filter tab, dan pembukaan modal teknis. Mendukung `prefers-reduced-motion`.
+- **MOTION: 2 (Balanced - Calm & Purposeful Entrance & Scroll-Reveal):** Animasi masuk awal pada Hero (`heroReveal`, `translate3d(0, 22px, 0)` + `opacity`, stagger 90ms-340ms) saat halaman dibuka dan scroll-reveal vertikal ringan (`translate3d(0, 28px, 0)` + `opacity`, 650ms dengan stagger 90ms-120ms) berbasis `IntersectionObserver` dan CSS untuk memandu fokus pembacaan tanpa library eksternal serta tetap mendukung `prefers-reduced-motion`. Transisi interaksi hover/tab/modal tetap cepat (150ms-200ms).
 
 ## 3. Palet Warna (Technical High-Contrast)
 - **Neutral Base:**

@@ -52,7 +52,12 @@
   </script>
 
   <!-- Custom Swiss Grid Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=20261126-3">
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('scroll-reveal-ready');
+    }
+  </script>
 </head>
 
 <body
@@ -65,7 +70,7 @@
   <!-- 1. NAVBAR MINIMALIS (SWISS TECHNICAL HEADER)                              -->
   <!-- ========================================================================= -->
   <header class="sticky top-0 z-40 w-full bg-white/95 border-b border-slate-200 backdrop-blur-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <div class="max-w-7xl mxNAVIGASI HALAMAN-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
 
       <!-- Developer Identity (Monospace & Avatar) -->
       <a href="#hero"
@@ -125,19 +130,19 @@
       <nav class="flex flex-col space-y-2 font-mono-tech text-sm" aria-label="Navigasi Menu Mobile">
         <a href="#proyek"
           class="mobile-nav-link py-2 px-3 text-slate-800 hover:bg-slate-100 hover:text-red-600 border-l-2 border-transparent hover:border-red-600">
-          [01] Proyek
+          Proyek
         </a>
         <a href="#tech-stack"
           class="mobile-nav-link py-2 px-3 text-slate-800 hover:bg-slate-100 hover:text-red-600 border-l-2 border-transparent hover:border-red-600">
-          [02] Tech Stack
+          Tech Stack
         </a>
         <a href="#layanan"
           class="mobile-nav-link py-2 px-3 text-slate-800 hover:bg-slate-100 hover:text-red-600 border-l-2 border-transparent hover:border-red-600">
-          [03] Layanan
+          Layanan
         </a>
         <a href="#kontak"
           class="mobile-nav-link py-2 px-3 text-slate-800 hover:bg-slate-100 hover:text-red-600 border-l-2 border-transparent hover:border-red-600">
-          [04] Kontak
+          Kontak
         </a>
       </nav>
       <div class="pt-2">
@@ -154,7 +159,7 @@
     <!-- ========================================================================= -->
     <!-- 2. HERO SECTION (EDITORIAL SPLIT - SWISS GRID DENGAN FOTO DEVELOPER)      -->
     <!-- ========================================================================= -->
-    <section id="hero" class="relative border-b border-slate-200 bg-white overflow-hidden py-12 sm:py-16 lg:py-20">
+    <section id="hero" class="relative border-b border-slate-200 bg-white overflow-hidden py-12 sm:py-16 lg:py-4">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
@@ -163,14 +168,14 @@
           <div class="lg:col-span-7 space-y-6">
 
             <!-- Metadata Status -->
-            <div
+            <div data-hero-reveal style="--hero-delay: 0ms;"
               class="inline-flex items-center gap-2 px-3 py-1 bg-slate-50 border border-slate-200 text-xs font-mono-tech text-slate-700">
               <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" aria-hidden="true"></span>
               <span>Tersedia untuk Proyek Baru & Kolaborasi Teknis (Bogor, ID)</span>
             </div>
 
             <!-- Identity & H1 Teknis -->
-            <div class="space-y-3">
+            <div data-hero-reveal style="--hero-delay: 90ms;" class="space-y-3">
               <p class="text-xs sm:text-sm font-mono-tech font-semibold text-red-600 uppercase tracking-wider">
                 Muhamad Azis Hakiki // Full-Stack Web Developer
               </p>
@@ -181,13 +186,13 @@
             </div>
 
             <!-- Sub-headline Teknis -->
-            <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-body max-w-2xl">
+            <p data-hero-reveal style="--hero-delay: 180ms;" class="text-base sm:text-lg text-slate-600 leading-relaxed font-body max-w-2xl">
               Fokus pada perancangan arsitektur database relasional yang rapi, efisiensi query SQL, keamanan otentikasi
               data, dan antarmuka web yang fungsional serta responsif.
             </p>
 
             <!-- Aksi Utama (CTAs R-15) -->
-            <div class="flex flex-wrap items-center gap-4 pt-2">
+            <div data-hero-reveal style="--hero-delay: 260ms;" class="flex flex-wrap items-center gap-4 pt-2">
               <a href="#proyek"
                 class="inline-flex items-center justify-center px-6 py-3.5 text-sm font-mono-tech font-semibold bg-red-600 text-white hover:bg-red-700 border border-red-600 shadow-sm transition-colors focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2">
                 Eksplorasi Proyek
@@ -199,7 +204,7 @@
             </div>
 
             <!-- Quick Specs Row -->
-            <div
+            <div data-hero-reveal style="--hero-delay: 340ms;"
               class="pt-4 border-t border-slate-100 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-mono-tech text-slate-500">
               <div class="flex items-center gap-1.5">
                 <span class="text-slate-400">STACK:</span>
@@ -214,7 +219,7 @@
           </div>
 
           <!-- Sisi Kanan: Lembar Spesifikasi Teknis & Foto Resmi Developer (5 Kolom) -->
-          <div class="lg:col-span-5 w-full">
+          <div data-hero-reveal style="--hero-delay: 150ms;" class="lg:col-span-5 w-full">
             <div class="border border-slate-200 bg-slate-50 shadow-sm relative overflow-hidden">
 
               <!-- Foto Profil Developer (Swiss Editorial Framed Portrait) -->
@@ -315,7 +320,8 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Section Header (Swiss Grid Editorial) -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-8 border-b border-slate-200 mb-8">
+        <div data-reveal
+          class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-8 border-b border-slate-200 mb-8">
           <div>
             <div class="flex items-center gap-2 mb-2 font-mono-tech text-xs text-red-600 font-semibold uppercase">
               <span class="w-2 h-2 bg-red-600 inline-block"></span>
@@ -325,7 +331,8 @@
               Aplikasi & Sistem Informasi Berbasis Laravel
             </h2>
             <p class="text-sm sm:text-base text-slate-600 mt-1 font-body max-w-2xl">
-              Studi kasus implementasi nyata dengan penekanan pada penyelesaian masalah operasional, keamanan data, dan
+              Studi kasus implementasi nyata dengan penekanan pada penyelesaian masalah operasional, keamanan data,
+              dan
               struktur kode yang dapat dirawat.
             </p>
           </div>
@@ -337,7 +344,8 @@
         </div>
 
         <!-- Filter Bar Kategori (R-26 Interaktif Nyata) -->
-        <div class="flex flex-wrap items-center gap-2 mb-8" role="group" aria-label="Filter kategori proyek">
+        <div data-reveal style="--reveal-delay: 90ms;" class="flex flex-wrap items-center gap-2 mb-8" role="group"
+          aria-label="Filter kategori proyek">
           <button type="button" data-filter="all" aria-pressed="true"
             class="px-4 py-2 text-xs font-mono-tech font-semibold bg-slate-900 text-white border border-slate-900 transition-colors hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-slate-900">
             Semua Proyek
@@ -363,7 +371,8 @@
 
         <!-- Empty State (R-27) -->
         <div id="projects-empty-state" class="hidden p-12 text-center border border-dashed border-slate-300 bg-white">
-          <p class="font-mono-tech text-sm text-slate-500">Tidak ada proyek yang sesuai dengan kategori terpilih.</p>
+          <p class="font-mono-tech text-sm text-slate-500">Tidak ada proyek yang sesuai dengan kategori terpilih.
+          </p>
         </div>
 
       </div>
@@ -376,7 +385,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Section Header -->
-        <div class="pb-8 border-b border-slate-200 mb-10">
+        <div data-reveal class="pb-8 border-b border-slate-200 mb-10">
           <div class="flex items-center gap-2 mb-2 font-mono-tech text-xs text-red-600 font-semibold uppercase">
             <span class="w-2 h-2 bg-red-600 inline-block"></span>
             <span>ARSITEKTUR & KOMPETENSI TEKNIS // BAGIAN 02</span>
@@ -393,10 +402,12 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
           <!-- Block 1: Backend & Database (Besar: 7 Kolom) -->
-          <div class="lg:col-span-7 border border-slate-200 bg-slate-50 p-6 sm:p-8 flex flex-col justify-between">
+          <div data-reveal
+            class="lg:col-span-7 border border-slate-200 bg-slate-50 p-6 sm:p-8 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-5">
-                <span class="font-mono-tech text-xs font-bold text-red-600 uppercase tracking-wider">[CORE] BACKEND &
+                <span class="font-mono-tech text-xs font-bold text-red-600 uppercase tracking-wider">[CORE] BACKEND
+                  &
                   DATABASE</span>
                 <span class="font-mono-tech text-[11px] text-slate-500">SERVER LOGIC & PERSISTENCE</span>
               </div>
@@ -406,8 +417,10 @@
               </h3>
 
               <p class="text-sm text-slate-600 font-body leading-relaxed mb-6">
-                Fokus utama pada pembuatan aplikasi web monolitik maupun headless dengan framework Laravel. Memastikan
-                pengelolaan dependensi rapi, pemisahan tanggung jawab kode menggunakan Service-Repository pattern, dan
+                Fokus utama pada pembuatan aplikasi web monolitik maupun headless dengan framework Laravel.
+                Memastikan
+                pengelolaan dependensi rapi, pemisahan tanggung jawab kode menggunakan Service-Repository pattern,
+                dan
                 proteksi dari kerentanan umum seperti SQL Injection dan CSRF.
               </p>
 
@@ -415,7 +428,8 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                 <div class="bg-white p-3 border border-slate-200">
                   <div class="font-mono-tech text-xs font-bold text-slate-900 mb-1">PHP 8.x & Laravel 11</div>
-                  <div class="text-xs text-slate-600">Eloquent ORM, Middleware, Service Container, Queue Jobs, Event &
+                  <div class="text-xs text-slate-600">Eloquent ORM, Middleware, Service Container, Queue Jobs, Event
+                    &
                     Listeners</div>
                 </div>
                 <div class="bg-white p-3 border border-slate-200">
@@ -430,7 +444,8 @@
                 </div>
                 <div class="bg-white p-3 border border-slate-200">
                   <div class="font-mono-tech text-xs font-bold text-slate-900 mb-1">Biometrik & Keamanan Data</div>
-                  <div class="text-xs text-slate-600">Integrasi Face Recognition, geofencing, Role-Based Access Control
+                  <div class="text-xs text-slate-600">Integrasi Face Recognition, geofencing, Role-Based Access
+                    Control
                     (RBAC), audit logging</div>
                 </div>
               </div>
@@ -444,10 +459,12 @@
           </div>
 
           <!-- Block 2: Deployment & Server (5 Kolom) -->
-          <div class="lg:col-span-5 border border-slate-200 bg-white p-6 sm:p-8 flex flex-col justify-between">
+          <div data-reveal style="--reveal-delay: 120ms;"
+            class="lg:col-span-5 border border-slate-200 bg-white p-6 sm:p-8 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-5">
-                <span class="font-mono-tech text-xs font-bold text-sky-700 uppercase tracking-wider">[INFRA] DEPLOYMENT
+                <span class="font-mono-tech text-xs font-bold text-sky-700 uppercase tracking-wider">[INFRA]
+                  DEPLOYMENT
                   & SERVER</span>
                 <span class="font-mono-tech text-[11px] text-slate-500">ENVIRONMENT & DEVOPS</span>
               </div>
@@ -457,19 +474,22 @@
               </h3>
 
               <p class="text-sm text-slate-600 font-body leading-relaxed mb-6">
-                Kemampuan mengoperasikan lingkungan server mandiri berbasis Linux untuk deployment aplikasi Laravel
+                Kemampuan mengoperasikan lingkungan server mandiri berbasis Linux untuk deployment aplikasi
+                Laravel
                 dengan tuning performa Nginx dan keamanan jaringan dasar.
               </p>
 
               <div class="space-y-3 mb-6">
                 <div class="bg-slate-50 p-3 border border-slate-200">
                   <div class="font-mono-tech text-xs font-bold text-slate-900">Linux Administration</div>
-                  <div class="text-xs text-slate-600 mt-0.5">Rocky Linux, Ubuntu Server, pengelolaan user permission,
+                  <div class="text-xs text-slate-600 mt-0.5">Rocky Linux, Ubuntu Server, pengelolaan user
+                    permission,
                     SSH keys, cron jobs</div>
                 </div>
                 <div class="bg-slate-50 p-3 border border-slate-200">
                   <div class="font-mono-tech text-xs font-bold text-slate-900">Nginx & PHP-FPM Engine</div>
-                  <div class="text-xs text-slate-600 mt-0.5">Konfigurasi reverse proxy, SSL/TLS Let's Encrypt, buffer
+                  <div class="text-xs text-slate-600 mt-0.5">Konfigurasi reverse proxy, SSL/TLS Let's Encrypt,
+                    buffer
                     optimization, gzip compression</div>
                 </div>
                 <div class="bg-slate-50 p-3 border border-slate-200">
@@ -488,7 +508,8 @@
           </div>
 
           <!-- Block 3: Frontend & UI Engineering (Penuh 12 Kolom) -->
-          <div class="lg:col-span-12 border border-slate-200 bg-slate-50 p-6 sm:p-8">
+          <div data-reveal style="--reveal-delay: 90ms;"
+            class="lg:col-span-12 border border-slate-200 bg-slate-50 p-6 sm:p-8">
             <div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-5">
               <span class="font-mono-tech text-xs font-bold text-slate-900 uppercase tracking-wider">[INTERFACE]
                 FRONTEND & UI IMPLEMENTATION</span>
@@ -498,17 +519,21 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
               <div>
-                <h4 class="font-mono-tech text-sm font-bold text-slate-900 mb-2">Blade Templating & Components</h4>
+                <h4 class="font-mono-tech text-sm font-bold text-slate-900 mb-2">Blade Templating & Components
+                </h4>
                 <p class="text-xs text-slate-600 leading-relaxed font-body">
-                  Pembuatan layout modular dengan Laravel Blade components, slot hierarki, dan rendering sisi server
+                  Pembuatan layout modular dengan Laravel Blade components, slot hierarki, dan rendering sisi
+                  server
                   yang cepat tanpa beban hidrasi JavaScript berlebih.
                 </p>
               </div>
 
               <div>
-                <h4 class="font-mono-tech text-sm font-bold text-slate-900 mb-2">Tailwind CSS & High Contrast</h4>
+                <h4 class="font-mono-tech text-sm font-bold text-slate-900 mb-2">Tailwind CSS & High Contrast
+                </h4>
                 <p class="text-xs text-slate-600 leading-relaxed font-body">
-                  Penyusunan utility-first styling yang mematuhi rasio kontras WCAG AA, penataan grid fleksibel, serta
+                  Penyusunan utility-first styling yang mematuhi rasio kontras WCAG AA, penataan grid fleksibel,
+                  serta
                   antarmuka responsif ramah perangkat mobile.
                 </p>
               </div>
@@ -516,7 +541,8 @@
               <div>
                 <h4 class="font-mono-tech text-sm font-bold text-slate-900 mb-2">Vanilla JavaScript (ES6+)</h4>
                 <p class="text-xs text-slate-600 leading-relaxed font-body">
-                  Interaktivitas DOM ringan, manipulasi state form asinkron (Fetch API), validasi sisi klien, serta
+                  Interaktivitas DOM ringan, manipulasi state form asinkron (Fetch API), validasi sisi klien,
+                  serta
                   penanganan event keyboard tanpa ketergantungan library berat.
                 </p>
               </div>
@@ -536,7 +562,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Header -->
-        <div class="pb-8 border-b border-slate-200 mb-10">
+        <div data-reveal class="pb-8 border-b border-slate-200 mb-10">
           <div class="flex items-center gap-2 mb-2 font-mono-tech text-xs text-red-600 font-semibold uppercase">
             <span class="w-2 h-2 bg-red-600 inline-block"></span>
             <span>LINGKUP JASA PENGEMBANGAN // BAGIAN 03</span>
@@ -553,7 +579,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           <!-- Service 01 -->
-          <div class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
+          <div data-reveal
+            class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
             <div class="flex items-start justify-between mb-4">
               <span
                 class="font-mono-tech text-xs font-bold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5">LAYANAN_01</span>
@@ -575,7 +602,8 @@
           </div>
 
           <!-- Service 02 -->
-          <div class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
+          <div data-reveal style="--reveal-delay: 120ms;"
+            class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
             <div class="flex items-start justify-between mb-4">
               <span
                 class="font-mono-tech text-xs font-bold text-sky-700 bg-sky-50 border border-sky-200 px-2 py-0.5">LAYANAN_02</span>
@@ -585,7 +613,8 @@
               Platform E-Commerce & Integrasi Transaksi
             </h3>
             <p class="text-sm text-slate-600 font-body leading-relaxed mb-4">
-              Pembangunan toko daring dengan sistem keranjang belanja atomik, katalog dinamis, integrasi kalkulasi tarif
+              Pembangunan toko daring dengan sistem keranjang belanja atomik, katalog dinamis, integrasi kalkulasi
+              tarif
               ekspedisi logistik, serta otomasi verifikasi transaksi dengan payment gateway via webhook aman.
             </p>
             <div class="text-xs font-mono-tech text-slate-500 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
@@ -596,7 +625,8 @@
           </div>
 
           <!-- Service 03 -->
-          <div class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
+          <div data-reveal
+            class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
             <div class="flex items-start justify-between mb-4">
               <span
                 class="font-mono-tech text-xs font-bold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5">LAYANAN_03</span>
@@ -606,8 +636,10 @@
               Website Company Profile (CMS) & Landing Page
             </h3>
             <p class="text-sm text-slate-600 font-body leading-relaxed mb-4">
-              Pembuatan profil instansi/perusahaan resmi dengan panel pengelolaan konten (CMS) dinamis, struktur SEO
-              yang terarah, serta landing page promosi berperforma kilat dengan formulir prospek terintegrasi langsung
+              Pembuatan profil instansi/perusahaan resmi dengan panel pengelolaan konten (CMS) dinamis, struktur
+              SEO
+              yang terarah, serta landing page promosi berperforma kilat dengan formulir prospek terintegrasi
+              langsung
               ke WhatsApp.
             </p>
             <div class="text-xs font-mono-tech text-slate-500 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
@@ -618,7 +650,8 @@
           </div>
 
           <!-- Service 04 -->
-          <div class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
+          <div data-reveal style="--reveal-delay: 120ms;"
+            class="border border-slate-200 bg-white p-6 sm:p-7 relative hover:border-slate-400 transition-colors">
             <div class="flex items-start justify-between mb-4">
               <span
                 class="font-mono-tech text-xs font-bold text-sky-700 bg-sky-50 border border-sky-200 px-2 py-0.5">LAYANAN_04</span>
@@ -628,8 +661,10 @@
               Audit Performa, Database & Refactoring Laravel
             </h3>
             <p class="text-sm text-slate-600 font-body leading-relaxed mb-4">
-              Pemeriksaan aplikasi web Laravel yang sudah berjalan: identifikasi N+1 query problem, indexing tabel
-              MySQL, restrukturisasi kode berantakan (spaghetti code) menjadi Service-Repository, dan setup deployment
+              Pemeriksaan aplikasi web Laravel yang sudah berjalan: identifikasi N+1 query problem, indexing
+              tabel
+              MySQL, restrukturisasi kode berantakan (spaghetti code) menjadi Service-Repository, dan setup
+              deployment
               VPS Linux Nginx.
             </p>
             <div class="text-xs font-mono-tech text-slate-500 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
@@ -651,7 +686,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Header -->
-        <div class="pb-8 border-b border-slate-200 mb-10">
+        <div data-reveal class="pb-8 border-b border-slate-200 mb-10">
           <div class="flex items-center gap-2 mb-2 font-mono-tech text-xs text-red-600 font-semibold uppercase">
             <span class="w-2 h-2 bg-red-600 inline-block"></span>
             <span>HUBUNGI DEVELOPER // BAGIAN 04</span>
@@ -668,7 +703,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
           <!-- Kontak Langsung & Kanal Komunikasi (5 Kolom) -->
-          <div class="lg:col-span-5 space-y-6">
+          <div data-reveal class="lg:col-span-5 space-y-6">
 
             <div class="border border-slate-200 bg-slate-50 p-6">
 
@@ -744,7 +779,7 @@
           </div>
 
           <!-- Formulir Kontak Teknis (7 Kolom) -->
-          <div class="lg:col-span-7">
+          <div data-reveal style="--reveal-delay: 120ms;" class="lg:col-span-7">
             <div class="border border-slate-200 bg-white p-6 sm:p-8">
               <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">
                 Kirim Rincian Kebutuhan Proyek
@@ -786,9 +821,11 @@
                       (Presensi Face Recognition, Asrama, HRIS)</option>
                     <option value="Platform E-Commerce & Transaksi">Platform E-Commerce & Transaksi Terintegrasi
                     </option>
-                    <option value="Website Company Profile / CMS">Website Company Profile (CMS) & Landing Page Konversi
+                    <option value="Website Company Profile / CMS">Website Company Profile (CMS) & Landing Page
+                      Konversi
                     </option>
-                    <option value="Audit & Optimasi Sistem Laravel">Audit & Optimasi Sistem Laravel (Database / Speedup)
+                    <option value="Audit & Optimasi Sistem Laravel">Audit & Optimasi Sistem Laravel (Database /
+                      Speedup)
                     </option>
                     <option value="Pengembangan Web Kustom Lainnya">Pengembangan Web Kustom Lainnya</option>
                   </select>
@@ -827,7 +864,7 @@
   <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800 items-start">
+      <div data-reveal class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800 items-start">
 
         <div class="md:col-span-6 space-y-3">
           <div class="flex items-center gap-2.5">
@@ -851,10 +888,10 @@
         <div class="md:col-span-3 space-y-2 font-mono-tech text-xs">
           <span class="text-slate-400 font-semibold block uppercase tracking-wider">NAVIGASI HALAMAN</span>
           <ul class="space-y-1 text-slate-300">
-            <li><a href="#proyek" class="hover:text-red-400 transition-colors">[01] Katalog Proyek</a></li>
-            <li><a href="#tech-stack" class="hover:text-red-400 transition-colors">[02] Tech Stack & DB</a></li>
-            <li><a href="#layanan" class="hover:text-red-400 transition-colors">[03] Lingkup Layanan</a></li>
-            <li><a href="#kontak" class="hover:text-red-400 transition-colors">[04] Kontak Resmi</a></li>
+            <li><a href="#proyek" class="hover:text-red-400 transition-colors">Katalog Proyek</a></li>
+            <li><a href="#tech-stack" class="hover:text-red-400 transition-colors">Tech Stack & DB</a></li>
+            <li><a href="#layanan" class="hover:text-red-400 transition-colors">Lingkup Layanan</a></li>
+            <li><a href="#kontak" class="hover:text-red-400 transition-colors">Kontak Resmi</a></li>
           </ul>
         </div>
 
@@ -1010,8 +1047,8 @@
   </div>
 
   <!-- JavaScript Modules -->
-  <script src="js/projects-data.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/projects-data.js?v=20261126-2"></script>
+  <script src="js/main.js?v=20261126-2"></script>
 </body>
 
 </html>
